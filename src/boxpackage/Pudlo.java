@@ -46,6 +46,7 @@ public class Pudlo {
 	}
 
 	public void wyjmijKlocek(int gdzie,Block k){
+		pudlo[gdzie%4][(gdzie/4)%4][gdzie/16]=false;		
 		for(int[] a:k.wektory){
 			if((a[0]==0)&&(a[1]==0)&&(a[2]==0)) {continue;}//przypadek pustego wektora
 			pudlo[((gdzie%4)+a[0])][(gdzie/4)%4+a[1]][gdzie/16+a[2]]=false;
